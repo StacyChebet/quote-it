@@ -3,9 +3,9 @@
 
 <ul>
     <div *ngFor='let quote of quotes; let i=index'>
-         <li >{{quote.message}}</li>
-         <button (click) = 'toggleDetails(i)'>Show Details</button>
-         <app-quote-details *ngIf = "quote.showAuthor" [quote]= 'quote' (isComplete)= 'completeQuote($event,i)'></app-quote-details>
+         <li>{{quote.message}}</li>
+         <button class = "btn btn-primary" (click) = 'toggleDetails(i)'>Show Details</button>
+         <app-quote-details *ngIf = "quote.showAuthor" [quote]= 'quote' (isComplete)= 'deleteQuote($event,i)'></app-quote-details>
     </div>
  
 </ul>
