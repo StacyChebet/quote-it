@@ -4,8 +4,13 @@
             <div class="form-group">
 
                 <label for="name">Your Name:</label>
-                <input type="text" required class="form-control" id="name" placeholder="What should we call you..."[(ngModel)]="newQuote.name" name="name">
+                <input type="text" class="form-control" id="name" placeholder="What should we call you..."[(ngModel)]="newQuote.name" name="name" #name = "ngModel" required>
+                 
+                <div [hidden]="name.valid || name.pristine" class="alert alert-danger">
+                  <p> Name is Required</p>
+                </div>
             </div>
+            
             <div class="form-group">
 
                 <label for="Your Quote">Your Quote</label>
