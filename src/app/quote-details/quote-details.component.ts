@@ -8,6 +8,17 @@ import {Quote} from '../quote';
 })
 export class QuoteDetailsComponent implements OnInit {
 
+  Upvotes: number = 0;
+  Downvotes: number = 0;
+
+  likeButtonClick() {
+    this.Upvotes++;
+  }
+
+  dislikeButtonClick() {
+    this.Downvotes++;
+  }
+
   @Input () quote: Quote;
   @Output () isComplete = new EventEmitter<boolean>();
 

@@ -1,3 +1,5 @@
 <p>Quoted by: {{quote.name}}</p>
 <p>Quote Author: {{quote.author}}</p>
+<button (click)="likeButtonClick()" class="btn btn-success">Up-votes: {{Upvotes}}</button>
+<button (click)="dislikeButtonClick()" class="btn btn-success">Down-votes: {{Downvotes}}</button><br/>
 <button class= "btn btn-danger" (click) = 'quoteDelete (true)'>Delete Quote</button>
