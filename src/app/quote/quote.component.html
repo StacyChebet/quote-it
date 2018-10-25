@@ -8,9 +8,11 @@
     <h2>See what you and others have to say!:</h2><br/>
     <ul>
         <div *ngFor='let quote of quotes; let i=index'>
-            <li>{{quote.message}}</li>
-            <button class = "btn btn-primary" (click) = 'toggleDetails(i)'>Show Details</button>
-            <app-quote-details *ngIf = "quote.showAuthor" [quote]= 'quote' (isComplete)= 'deleteQuote($event,i)'></app-quote-details>
+            <div class = "jumbotron">
+                <li>{{quote.message}}</li>
+                <button class = "btn btn-primary" (click) = 'toggleDetails(i)'>Show Details</button>
+                <app-quote-details *ngIf = "quote.showAuthor" [quote]= 'quote' (isComplete)= 'deleteQuote($event,i)'></app-quote-details>
+            </div>
         </div>
     
     </ul>
